@@ -4,12 +4,10 @@
 
 <img title="CAD" alt="CAD" src="images/assembled/cad_assembly.jpg">
 
-This mod fixes `K1` issues namely excessive ringing/echo, unstable print quality, frequent maintenance, also it makes printer quiet.
+This mod fixes `K1 Max` issues namely excessive ringing/echo, unstable print quality, frequent maintenance, also it makes printer quiet.
 
-It should be compatible with regular `K1` (tested), `K1C` and `K1 SE` (not tested, likely heat sink needs to be replaced with heatsink from regular `K1`).
-
- - **This mod does not change print area**
- - **You must use camera mount from this mod (8mm lower than original)**
+ - **This mod does not change print area (almost, clr_noz_start_y: 297)**
+ - **You must use camera mount from this mod**
  - **You must remove stock motor pulleys (or use non-stock stepper motors)**
 
 #### Belts, pulleys, motors
@@ -20,7 +18,7 @@ You have to remove stock motor pulleys. You can use a bearing puller to do that 
 
 I used 20T motor pulleys for 15 mm belt (`rotation_distance` needs to be adjusted to `40` and `driver_SGTHRS` must be tuned `printer.cfg`).
 
-You can install non-stock motors e.g. `Leadshine 42cm06 1.8` (low VFA, need custom wiring, expensive) or `LDO-42STH48-1684MAC 0.9` (requires `full_steps_per_rotation: 400`, loud, limited acceleration, low VFA).
+You can install non-stock motors e.g. `Leadshine 42cm06 1.8` (low VFA, custom wiring needed, expensive) or `LDO-42STH48-1684MAC 0.9` (requires `full_steps_per_rotation: 400`, loud, limited acceleration, low VFA).
 
 This mod uses double diaphragm couplers and `MF95ZZ` bearings.
 
@@ -28,21 +26,19 @@ This mod uses double diaphragm couplers and `MF95ZZ` bearings.
 
 This mod uses two `MGN12` rails with `MGN12H` carriages for Y and one `MGN9` rail with `MGN9H` carriage for X axis.
 
-X rail has max length of 331 mm, 300 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). It is important to use quality rails for X axis (with minimal backlash).
+X rail has max length of 410 mm, 380 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). It is important to use quality rails for X axis (with minimal backlash).
 
 Y rails have max length of 314 mm (safe 310 mm), 300 mm between far left and far right holes. 
 
 #### Materials
 
-Recommended printing materials are PA-GF, PA-CF, ABS-GF, ABS-CF or anything else that is rigid and can sustain high temperatures. I don't recommend printing toolhead with pure ABS. I'd recommend PA-GF or PA-CF, as screw joints tend to become loose in ABS. 
+Recommended printing materials are PA-GF, PA-CF, ABS-GF, ABS-CF or anything else that is rigid and can sustain high temperatures. I don't recommend printing with ABS, as screw joints tend to become loose in ABS. 
 
 Wall loops, top/bottom layers should be at least 5, for motor mounts I'd recommend 6-7.
 
 #### Options for maximum performance
 
 - Use light extruder - [KKm extruder](https://www.printables.com/model/906070-artis3d-kkm-extruder-remix) (probably I'll upload my own remix)
-- Use light extruder motor - LDO 36STH17-0354AHG or 36STH20-1004AHG
-- Use light mgn9 rails - hollow/milled rails from FYSETC (they have 6mm height instead of 6.5mm, you have to print spacer)
 
 ## License
 
@@ -52,7 +48,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ### Notes
 
-Partially this work is based on [creality-k1-max-xy-rails-mod](https://github.com/kemsky/creality-k1-max-xy-rails-mod) and uses some CAD files made by [Henlor](https://www.printables.com/@Henlor).
+Partially this work is based on [creality-k1-xy-rails-mod](https://github.com/kemsky/creality-k1-xy-rails-mod) and uses some CAD files made by [Henlor](https://www.printables.com/@Henlor).
 
 ## Published
 
@@ -196,14 +192,12 @@ You can find those on AliExpress, manufacturer NINDEJIN, search for "Ultra Low P
 
 | Item                            | Type      | Count |
 |---------------------------------|-----------|-------|
-| DIN 912 Socket Head Cap Screw   | M3 16 mm  | 1     |
-| DIN 912 Socket Head Cap Screw   | M3 8 mm   | 2     |
-| Heat insert                     | M3 5x5 mm | 2     |
+| DIN 912 Socket Head Cap Screw   | M3 25 mm  | 2     |
+| DIN 912 Socket Head Cap Screw   | M3 8 mm   | 4     |
+| Heat insert                     | M3 5x5 mm | 4     |
+
 
 Mounting Y rails to the top frame is important if you want less vibrations.
-Default mount option is printed mount. You'll have to drill and tap M3 thread in the top frame.
-
-Instead of printed mount you can buy metal plate or a set of plates to get ~8.5 mm thickness.
 
 ### Y axis
 
@@ -223,7 +217,7 @@ First, make two holes on the left and on the right, tap M3 threads, mount MGN9 r
 |-------------------------------|----------------|-------|
 | Aluminium square pipe         | 15x15x2 331 mm | 1     |
 | DIN 912 Socket Head Cap Screw | M3 6 mm        | 7-14  |
-| MGN9 liner rail               | 331 mm         | 1     |
+| MGN9 liner rail               | 410 mm         | 1     |
 
 ### Tensioner left
 
@@ -381,7 +375,7 @@ Unicorn hotend - [k1_toolhead_spacer_unicorn.stl](/stl/k1_toolhead_spacer_unicor
 
 You can install BIQU MicroProbe sensor which is much better than original load cell probe.
 
-(**!**) Pins on toolhead board ("touch" connector) do not match microprobe pins, you can not use premade JST 1.25 5pins cable, you'll have to make your own.
+[ **!** ] Pins on toolhead board ("touch" connector) do not match microprobe pins, you can not use premade JST 1.25 5pins cable, you'll have to make your own.
 
 <details>
     <summary>Pins</summary>
