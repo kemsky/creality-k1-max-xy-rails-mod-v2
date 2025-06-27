@@ -4,6 +4,8 @@
 
 <img title="CAD" alt="CAD" src="images/assembled/cad_assembly.jpg">
 
+The primary difference from the previous version is MGN9 rail on X axis, it makes X axis lighter and increases maximum accelerations. Also, it includes all improvemnts made for regular K1.
+
 This mod fixes `K1 Max` issues namely excessive ringing/echo, unstable print quality, frequent maintenance, also it makes printer quiet.
 
  - **This mod does not change print area (almost, clr_noz_start_y: 297)**
@@ -18,7 +20,13 @@ You have to remove stock motor pulleys. You can use a bearing puller to do that 
 
 I used 20T motor pulleys for 15 mm belt (`rotation_distance` needs to be adjusted to `40` and `driver_SGTHRS` must be tuned `printer.cfg`).
 
-You can install non-stock motors e.g. `Leadshine 42cm06 1.8` (low VFA, custom wiring needed, expensive) or `LDO-42STH48-1684MAC 0.9` (requires `full_steps_per_rotation: 400`, loud, limited acceleration, low VFA).
+You can install non-stock motors e.g. `Leadshine 42cm06 1.8` (low VFA, silent, high torque, custom wiring needed) or `LDO-42STH48-1684MAC 0.9` (requires `full_steps_per_rotation: 400`, loud, limited acceleration, low VFA).
+
+<details>
+    <summary>Leadshine 42cm06 1.8 wiring</summary>
+    <img title="cm06_wiring.jpg" alt="cm06_wiring.jpg" src="images/assembly/cm06_wiring.jpg">
+</details>
+<br>
 
 This mod uses double diaphragm couplers and `MF95ZZ` bearings.
 
@@ -26,19 +34,19 @@ This mod uses double diaphragm couplers and `MF95ZZ` bearings.
 
 This mod uses two `MGN12` rails with `MGN12H` carriages for Y and one `MGN9` rail with `MGN9H` carriage for X axis.
 
-X rail has max length of 410 mm, 380 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). It is important to use quality rails for X axis (with minimal backlash).
+X rail has max length of 410 mm, 380 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). It is important to use quality rails for X axis (with minimal backlash, Z1 preload).
 
 Y rails have max length of 314 mm (safe 310 mm), 300 mm between far left and far right holes. 
 
 #### Materials
 
-Recommended printing materials are PA-GF, PA-CF, ABS-GF, ABS-CF or anything else that is rigid and can sustain high temperatures. I don't recommend printing with ABS, as screw joints tend to become loose in ABS. 
+Recommended printing materials are PA-GF, PA-CF, ABS-GF, ABS-CF or anything else that is rigid and can sustain high temperatures. Screw joints tend to become loose in ABS over time. 
 
-Wall loops, top/bottom layers should be at least 5, for motor mounts I'd recommend 6-7.
+Wall loops, top/bottom layers should be at least 5, I'd recommend 6-7, infill 40%.
 
 #### Options for maximum performance
 
-- Use light extruder - [KKm extruder](https://www.printables.com/model/906070-artis3d-kkm-extruder-remix) (probably I'll upload my own remix)
+- Use light extruder - [KKm extruder](https://www.printables.com/model/906070-artis3d-kkm-extruder-remix)
 
 ## License
 
@@ -207,17 +215,23 @@ See [cad_rail_mgn12.FCStd](/src/cad_rail_mgn12.FCStd) for exact configuration an
 |-------------------------------|--------|-------|
 | MGN12 liner rail              | 310 mm | 2     |
 
+Y rails have max length of 314 mm (safe 310 mm), 300 mm between far left and far right holes. `MGN12H` carriage.
+
 ### X axis
 
 See [cad_x_axis.FCStd](/src/cad_x_axis.FCStd) for exact configuration and dimensions.
 
-First, make two holes on the left and on the right, tap M3 threads, mount MGN9 rail, align it carefully and tighten screws. Use rail as drilling template, first make mark using 4 mm drill bit, then drill remaining holes using 2.5 mm drill bit, then tap M3 threads.
+First, make two holes on the left and on the right, tap M3 threads, mount MGN9 rail, align it carefully and tighten screws. Use rail as drilling template, make mark using 4 mm drill bit, then drill remaining holes using 2.5 mm drill bit, then tap M3 threads.
 
 | Item                          | Type           | Count |
 |-------------------------------|----------------|-------|
-| Aluminium square pipe         | 15x15x2 331 mm | 1     |
-| DIN 912 Socket Head Cap Screw | M3 6 mm        | 7-14  |
+| Aluminium square pipe         | 15x15x2 410 mm | 1     |
+| DIN 912 Socket Head Cap Screw | M3 6 mm        | 9-18  |
 | MGN9 liner rail               | 410 mm         | 1     |
+
+X rail has max length of 410 mm, 380 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). `MGN9H` carriage.
+
+It is important to use quality rails for X axis (with minimal backlash, Z1 preload).
 
 ### Tensioner left
 
@@ -373,7 +387,12 @@ Unicorn hotend - [k1_toolhead_spacer_unicorn.stl](/stl/k1_toolhead_spacer_unicor
 
 #### Toolhead Microprobe
 
-You can install BIQU MicroProbe sensor which is much better than original load cell probe.
+| Item                            | Type            | Count |
+|---------------------------------|-----------------|-------|
+| Heat insert                     | M2.5 3.5x4 mm   | 2     |
+
+
+You can install `BIQU MicroProbe` sensor which is much better than original load cell probe.
 
 [ **!** ] Pins on toolhead board ("touch" connector) do not match microprobe pins, you can not use premade JST 1.25 5pins cable, you'll have to make your own.
 
@@ -383,6 +402,7 @@ You can install BIQU MicroProbe sensor which is much better than original load c
     <img title="toolhead_touch" alt="toolhead_touch" src="images/microprobe/toolhead_touch.png">
 </details>
 <br>
+
 
 ```
 - touch GND            -> microprobe GND    (black)
@@ -414,7 +434,7 @@ pin: ^!nozzle_mcu:PA9
 deactivate_on_each_sample: False
 x_offset: 0
 y_offset: 20
-#z_offset: 0  # do PROBE_CALIBRATE
+z_offset: 0  # do PROBE_CALIBRATE
 samples: 2
 samples_tolerance: 0.05
 samples_tolerance_retries: 3
@@ -426,6 +446,8 @@ deactivate_gcode:
 ```
 5. Use `PROBE_CALIBRATE` macros to determine Z-Offset and save it.
 
+Depending on your hotend you may need a spacer.
+
 <details>
     <summary>Microprobe spacer</summary>
     <img title="k1_toolhead_microprobe_spacer.stl" alt="k1_toolhead_microprobe_spacer.stl" src="images/assembly/k1_toolhead_microprobe_spacer_orthographic_axo.png">
@@ -433,10 +455,6 @@ deactivate_gcode:
 <br>
 
 [k1_toolhead_microprobe_spacer.stl](/stl/k1_toolhead_microprobe_spacer.stl)
-
-| Item                            | Type            | Count |
-|---------------------------------|-----------------|-------|
-| Heat insert                     | M2.5 3.5x4 mm   | 2     |
 
 ## Bonus Models
 
@@ -460,19 +478,15 @@ deactivate_gcode:
 
 [k1_toolhead_cover_experimental.stl](/stl/k1_toolhead_cover_experimental.stl)
 
-### Cable covers
+### Cable cover
 
 <details>
     <summary>Preview</summary>
-    <img title="cable covers" alt="cable covers" src="images/assembled/cable_covers.jpg">
+    <img title="k1_cable_cover_horizontal_orthographic_axo" alt="k1_cable_cover_horizontal_orthographic_axo" src="images/assembly/k1_cable_cover_horizontal_orthographic_axo.png">
 </details>
 <br>
 
 Horizontal - [k1_cable_cover_horizontal.stl](/stl/k1_cable_cover_horizontal.stl)
-
-Vertical top - [k1_cable_cover_vertical_top.stl](/stl/k1_cable_cover_vertical_top.stl)
-
-Vertical bottom - [k1_cable_cover_vertical_bottom.stl](/stl/k1_cable_cover_vertical_bottom.stl)
 
 ### Z-Carriage for T8 Oldham Coupler
 
