@@ -60,8 +60,9 @@ Partially this work is based on [creality-k1-xy-rails-mod](https://github.com/ke
 
 ## Published
 
-<!-- https://www.printables.com/model/1109686-creality-k1-xy-linear-rails-mod
+https://www.printables.com/model/1339635-creality-k1-max-xy-linear-rails-mod-v2
 
+<!-- 
 https://www.thingiverse.com/thing:6893994
 
 https://makerworld.com/en/models/931135 -->
