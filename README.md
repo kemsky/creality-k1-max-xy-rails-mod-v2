@@ -77,30 +77,15 @@ https://makerworld.com/en/models/931135 -->
 
 ## Photos
 
-<!-- <details>
+<details>
     <summary>Photo 1</summary>
-    <img title="Photo 1" alt="Photo 1" src="images/assembled/IMG_20241211_051136.jpg">
+    <img title="Photo 1" alt="Photo 1" src="images/assembled/motor_mounts.jpg">
 </details>
 
 <details>
     <summary>Photo 2</summary>
-    <img title="Photo 2" alt="Photo 2" src="images/assembled/IMG_20241211_051154.jpg">
+    <img title="Photo 2" alt="Photo 2" src="images/assembled/top.jpg">
 </details>
-
-<details>
-    <summary>Photo 3</summary>
-    <img title="Photo 3" alt="Photo 3" src="images/assembled/IMG_20241211_051206.jpg">
-</details>
-
-<details>
-    <summary>Photo 4</summary>
-    <img title="Photo 4" alt="Photo 4" src="images/assembled/IMG_20241211_051212.jpg">
-</details>
-
-<details>
-    <summary>Photo 5</summary>
-    <img title="Photo 5" alt="Photo 5" src="images/assembled/IMG_20241211_051230.jpg">
-</details> -->
 
 ## BOM, Assembly, etc.
 
