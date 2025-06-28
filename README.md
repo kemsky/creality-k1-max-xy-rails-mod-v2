@@ -50,7 +50,12 @@ Y rails have max length of 314 mm (safe 310 mm), 300 mm between far left and far
 
 Recommended printing materials are PA-GF, PA-CF, ABS-GF, ABS-CF or anything else that is rigid and can sustain high temperatures. Screw joints tend to become loose in ABS over time. 
 
-Wall loops, top/bottom layers should be at least 5, I'd recommend 6-7, infill 40%.
+Wall loops, top/bottom layers should be at least 5, I'd recommend 6-7, infill 40%, add manual normal supports.
+
+<details>
+    <summary>Printing orientation</summary>
+    <img title="printing_orientation.png" alt="printing_orientation.png" src="images/assembly/printing_orientation.png">
+</details>
 
 #### Options for maximum performance
 
