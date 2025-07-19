@@ -519,6 +519,28 @@ Requires 2x25mm DIN 912 M3 screws.
 
 [k1_cutter_block.stl](/stl/k1_cutter_block.stl)
 
+### Mellow Fly Mini Pad
+
+This is part of electronics upgrade.
+
+Requires 4x5mm and 4x6mm DIN 912 M3 screws. 8 + 1 heat inserts. It also requires specific USB cable due to lack of space (you can make one yourself from donor cable).
+
+<details>
+    <summary>Preview</summary>
+    <img title="k1_flyminipad_back.stl" alt="k1_flyminipad_back.stl" src="images/assembly/k1_flyminipad_back_orthographic_axo.png">
+</details>
+<br>
+
+[k1_flyminipad_back.stl](/stl/k1_flyminipad_back.stl)
+
+<details>
+    <summary>Preview</summary>
+    <img title="k1_flyminipad_top.stl" alt="k1_flyminipad_top.stl" src="images/assembly/k1_flyminipad_top_orthographic_axo.png">
+</details>
+<br>
+
+[k1_flyminipad_top.stl](/stl/k1_flyminipad_top.stl)
+
 ## Automation
 
 `export.sh`/`export.cmd` scripts export all necessary objects to STl and STEP and optionally capture model screenshots.
