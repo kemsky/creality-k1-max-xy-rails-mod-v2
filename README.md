@@ -44,7 +44,7 @@ This mod uses two `MGN12` rails with `MGN12H` carriages for Y and one `MGN9` rai
 
 X rail has max length of 410 mm, 380 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). It is important to use quality rails for X axis (with minimal backlash, Z1 preload).
 
-Y rails have max length of 314 mm (safe 310 mm), 300 mm between far left and far right holes. 
+Y rails have max length of 385 mm (375 + 5x2 mm), 375 mm between far left and far right holes. 
 
 #### Materials
 
@@ -212,9 +212,9 @@ See [cad_rail_mgn12.FCStd](/src/cad_rail_mgn12.FCStd) for exact configuration an
 
 | Item                          | Type   | Count |
 |-------------------------------|--------|-------|
-| MGN12 liner rail              | 310 mm | 2     |
+| MGN12 liner rail              | 385 mm | 2     |
 
-Y rails have max length of 314 mm (safe 310 mm), 300 mm between far left and far right holes. `MGN12H` carriage.
+Y rails have max length of 385 mm (375 + 5x2 mm), 375 mm between far left and far right holes. `MGN12H` carriage.
 
 ### X axis
 
