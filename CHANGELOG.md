@@ -1,6 +1,7 @@
 ### 2025-09-02
 
 - correct tensioners size
+- add microprobe fix
 
 ### 2025-07-19
 
