@@ -8,11 +8,11 @@ The primary difference from the previous version is MGN9 rail on X axis, it make
 
 This mod fixes `K1 Max` issues namely excessive ringing/echo, unstable print quality, frequent maintenance, also it makes printer quiet.
 
- - **This mod does not change print area (almost, clr_noz_start_y: 297)**
- - **You must use camera mount from this mod**
- - **You must remove stock motor pulleys (or use non-stock stepper motors)**
+- **This mod does not change print area (almost, clr_noz_start_y: 297)**
+- **You must use camera mount from this mod**
+- **You must remove stock motor pulleys (or use non-stock stepper motors)**
 
-#### Belts, pulleys, motors
+### Belts, pulleys, motors
 
 This mode uses `POWGE` 7.7 mm belt and corresponding idler pulleys. You can use 6 mm belt with stock idlers if you add washers to compensate height differences (`POWGE` idlers have 10.4 mm height), also you can use `F604ZZ` flanged bearings (not tested).
 
@@ -44,11 +44,11 @@ This mod uses two `MGN12` rails with `MGN12H` carriages for Y and one `MGN9` rai
 
 X rail has max length of 410 mm, 380 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). It is important to use quality rails for X axis (with minimal backlash, Z1 preload).
 
-Y rails have max length of 385 mm (375 + 5x2 mm), 375 mm between far left and far right holes. 
+Y rails have max length of 385 mm (375 + 5x2 mm), 375 mm between far left and far right holes.
 
 #### Materials
 
-Recommended printing materials are PA-GF, PA-CF, ABS-GF, ABS-CF or anything else that is rigid and can sustain high temperatures. Screw joints tend to become loose in ABS over time. 
+Recommended printing materials are PA-GF, PA-CF, ABS-GF, ABS-CF or anything else that is rigid and can sustain high temperatures. Screw joints tend to become loose in ABS over time.
 
 Wall loops, top/bottom layers should be at least 5, I'd recommend 6-7, infill 40%, add manual normal supports.
 
@@ -65,7 +65,7 @@ Wall loops, top/bottom layers should be at least 5, I'd recommend 6-7, infill 40
 
 All work in this repository falls under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
 
-https://creativecommons.org/licenses/by-nc-sa/4.0/
+<https://creativecommons.org/licenses/by-nc-sa/4.0/>
 
 ### Notes
 
@@ -73,7 +73,7 @@ Partially this work is based on [creality-k1-xy-rails-mod](https://github.com/ke
 
 ## Published
 
-https://www.printables.com/model/1339635-creality-k1-max-xy-linear-rails-mod-v2
+<https://www.printables.com/model/1339635-creality-k1-max-xy-linear-rails-mod-v2>
 
 <!-- 
 https://www.thingiverse.com/thing:6893994
@@ -92,9 +92,9 @@ https://makerworld.com/en/models/931135 -->
     <img title="Photo 2" alt="Photo 2" src="images/assembled/top.jpg">
 </details>
 
-## BOM, Assembly, etc.
+## BOM, Assembly
 
-! `Flat Thin Wafer Head Screw` - M3 screws with flat head that has 1 mm thickness. 
+! `Flat Thin Wafer Head Screw` - M3 screws with flat head that has 1 mm thickness.
 You can find those on AliExpress, manufacturer NINDEJIN, search for "Ultra Low Profile Head Screw".
 
 ### Camera
@@ -203,7 +203,6 @@ You can find those on AliExpress, manufacturer NINDEJIN, search for "Ultra Low P
 | DIN 912 Socket Head Cap Screw   | M3 8 mm   | 4     |
 | Heat insert                     | M3 5x5 mm | 4     |
 
-
 Mounting Y rails to the top frame is important if you want less vibrations.
 
 ### Y axis
@@ -294,7 +293,6 @@ It is important to use quality rails for X axis (with minimal backlash, Z1 prelo
 | POWGE GT2 No Teeth Idler Pulley | 7.7 mm    | 2     |
 | Heat insert                     | M3 5x5 mm | 6     |
 
-
 ### Motor mount right
 
 <details>
@@ -318,7 +316,6 @@ It is important to use quality rails for X axis (with minimal backlash, Z1 prelo
 | Motor Pulley for 15mm belt      | 20T 5 mm  | 1     |
 | POWGE GT2 No Teeth Idler Pulley | 7.7 mm    | 2     |
 | Heat insert                     | M3 5x5 mm | 6     |
-
 
 ### Toolhead clamp left
 
@@ -383,13 +380,11 @@ Unicorn hotend - [k1_toolhead_spacer_unicorn.stl](/stl/k1_toolhead_spacer_unicor
 | Heat insert                     | M3 5x4 mm   | 4     |
 | Heat insert                     | M2 3.5x3 mm | 4     |
 
-
 #### Toolhead Microprobe
 
 | Item                            | Type            | Count |
 |---------------------------------|-----------------|-------|
 | Heat insert                     | M2.5 3.5x4 mm   | 2     |
-
 
 You can install `BIQU MicroProbe` sensor which is much better than original load cell probe.
 
@@ -402,8 +397,7 @@ You can install `BIQU MicroProbe` sensor which is much better than original load
 </details>
 <br>
 
-
-```
+```pre
 - touch GND            -> microprobe GND    (black)
 - touch 5v             -> microprobe 5v     (red)
 - touch nozzle_mcu:PA8 -> microprobe servo  (yellow)
@@ -415,37 +409,38 @@ You can install `BIQU MicroProbe` sensor which is much better than original load
 2. Edit `/usr/share/klipper/klippy/extras/custom_macro.py` and comment all prtouch usages
 3. Remove `/usr/share/klipper/klippy/extras/custom_macro.pyc` and reboot
 4. Add the following to `printer.cfg`:
-```
-[gcode_macro _PROBE_DOWN]
-gcode:
-    SET_PIN PIN=probe_enable VALUE=1
 
-[gcode_macro _PROBE_UP]
-gcode:
-    SET_PIN PIN=probe_enable VALUE=0
+    ```cfg
+    [gcode_macro _PROBE_DOWN]
+    gcode:
+        SET_PIN PIN=probe_enable VALUE=1
 
-[output_pin probe_enable]
-pin: nozzle_mcu:PA8
-value: 0
+    [gcode_macro _PROBE_UP]
+    gcode:
+        SET_PIN PIN=probe_enable VALUE=0
 
-[probe]
-pin: ^!nozzle_mcu:PA9
-deactivate_on_each_sample: False
-x_offset: 0
-y_offset: 20
-z_offset: 0  # do PROBE_CALIBRATE
-samples: 2
-samples_tolerance: 0.05
-samples_tolerance_retries: 3
-activate_gcode:
-    _PROBE_DOWN
-    G4 P500
-deactivate_gcode:
-    _PROBE_UP
-```
+    [output_pin probe_enable]
+    pin: nozzle_mcu:PA8
+    value: 0
+
+    [probe]
+    pin: ^!nozzle_mcu:PA9
+    deactivate_on_each_sample: False
+    x_offset: 0
+    y_offset: 20
+    z_offset: 0  # do PROBE_CALIBRATE
+    samples: 2
+    samples_tolerance: 0.05
+    samples_tolerance_retries: 3
+    activate_gcode:
+        _PROBE_DOWN
+        G4 P500
+    deactivate_gcode:
+        _PROBE_UP
+    ```
+
 5. Use `PROBE_CALIBRATE` macros to determine Z-Offset and save it.
 6. Sometimes you can get error `Communication Timeout during homing z`. Use `vi /usr/share/klipper/klippy/mcu.py` and increase `TRSYNC_TIMEOUT` from 0.025 up to 0.05. Remove file `/usr/share/klipper/klippy/mcu.pyc`, reboot.
-
 
 Depending on your hotend you may need a spacer.
 
