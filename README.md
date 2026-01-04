@@ -293,6 +293,8 @@ It is important to use quality rails for X axis (with minimal backlash, Z1 prelo
 | POWGE GT2 No Teeth Idler Pulley | 7.7 mm    | 2     |
 | Heat insert                     | M3 5x5 mm | 6     |
 
+You'll need 1 M3x35 screw from stock gantry motor mounts.
+
 ### Motor mount right
 
 <details>
@@ -316,6 +318,8 @@ It is important to use quality rails for X axis (with minimal backlash, Z1 prelo
 | Motor Pulley for 15mm belt      | 20T 5 mm  | 1     |
 | POWGE GT2 No Teeth Idler Pulley | 7.7 mm    | 2     |
 | Heat insert                     | M3 5x5 mm | 6     |
+
+You'll need 1 M3x35 screw from stock gantry motor mounts.
 
 ### Toolhead clamp left
 
