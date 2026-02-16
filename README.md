@@ -521,6 +521,8 @@ Requires 2x25mm DIN 912 M3 screws.
 
 [k1_cutter_block.stl](/stl/k1_cutter_block.stl)
 
+There is hopper block as well but it is not tested, see issue [#7](https://github.com/kemsky/creality-k1-max-xy-rails-mod-v2/issues/7).
+
 ### Mellow Fly Mini Pad
 
 This is part of electronics upgrade.
