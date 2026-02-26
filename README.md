@@ -4,7 +4,7 @@
 
 <img title="CAD" alt="CAD" src="images/assembled/cad_assembly.jpg">
 
-The primary difference from the previous version is MGN9 rail on X axis, it makes X axis lighter and increases maximum accelerations. Also, it includes all improvemnts made for regular K1.
+The primary difference from the previous version is MGN9 rail on X axis, it makes X axis lighter and increases maximum accelerations. Also, it includes all improvements made for regular K1.
 
 This mod fixes `K1 Max` issues namely excessive ringing/echo, unstable print quality, frequent maintenance, also it makes printer quiet.
 
@@ -211,7 +211,7 @@ See [cad_rail_mgn12.FCStd](/src/cad_rail_mgn12.FCStd) for exact configuration an
 
 | Item                          | Type   | Count |
 |-------------------------------|--------|-------|
-| MGN12 liner rail              | 385 mm | 2     |
+| MGN12 linear rail             | 385 mm | 2     |
 
 Y rails have max length of 385 mm (375 + 5x2 mm), 375 mm between far left and far right holes. `MGN12H` carriage.
 
@@ -225,7 +225,7 @@ First, make two holes on the left and on the right, tap M3 threads, mount MGN9 r
 |-------------------------------|----------------|-------|
 | Aluminium square pipe         | 15x15x2 410 mm | 1     |
 | DIN 912 Socket Head Cap Screw | M3 6 mm        | 9-18  |
-| MGN9 liner rail               | 410 mm         | 1     |
+| MGN9 linear rail              | 410 mm         | 1     |
 
 X rail has max length of 410 mm, 380 mm between far left and far right holes. X axis requires 15x15x2 mm aluminium tube (the same length as rail). `MGN9H` carriage.
 
